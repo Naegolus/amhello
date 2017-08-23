@@ -47,15 +47,18 @@ public:
 	}
 };
 
-DspcHello::DspcHello() {
+DspcHello::DspcHello()
+{
 
 }
 
-DspcHello::~DspcHello() {
+DspcHello::~DspcHello()
+{
 
 }
 
-int DspcHello::exec(int argc, char *argv[]) {
+int DspcHello::exec(int argc, char *argv[])
+{
 
 	try {
 		TCLAP::CmdLine cmd("Command description message", ' ', VERSION);
@@ -81,17 +84,16 @@ int DspcHello::exec(int argc, char *argv[]) {
 	return init();
 }
 
-int DspcHello::init() {
+int DspcHello::init()
+{
 
 	cout << "Hello World!" << endl;
 	cout << "This is " << PACKAGE_STRING << endl;
 
-	if (reverseName)
-	{
+	if (reverseName) {
 		reverse(name.begin(),name.end());
 		cout << "My name (spelled backwards) is: " << name << endl;
-	}
-	else
+	} else
 		cout << "My name is: " << name << endl;
 
 	return 0;
